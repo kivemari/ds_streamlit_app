@@ -21,6 +21,6 @@ stroke-predictor-app/
 ├── main.py # Streamlit web app
 ├── model/
 │ └── model.joblib # Trained ensemble model
-├── requirements.txt # Dependencies
+├── requirements.txt # List of required Python packages
 ├── README.md # Project documentation
-└── .gitignore
+└── .gitignore # Git ignore rules
