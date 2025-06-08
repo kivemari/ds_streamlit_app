@@ -1,0 +1,6 @@
+# Model files
+*.joblib
+*.pkl
+
+# Streamlit cache
+.streamlit/
