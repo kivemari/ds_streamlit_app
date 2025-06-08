@@ -6,7 +6,7 @@ This project is a web-based application that predicts the risk of stroke using p
 
 ## 🚀 Demo
 
-Try it live on [Streamlit Cloud]()
+Try it live on [Streamlit Cloud](https://deployed-machine-learning-model.streamlit.app)
 
 ## 🔍 Features
 
