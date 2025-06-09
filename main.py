@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-import joblib
 import numpy as np
-from preprocessing import add_features
-
+import joblib
+from xgboost import XGBClassifier
+from preprocessing import add_features  # make sure this file exists and is accessible
 
 # Load model
 model = joblib.load("model/model.joblib")
@@ -48,4 +48,3 @@ if st.button("Predict"):
     st.subheader("Prediction Result")
     st.write("💡 Stroke Risk:", "Yes" if prediction == 1 else "No")
     st.write(f"📊 Probability of Stroke: {probability:.2f}")
-
