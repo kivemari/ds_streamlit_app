@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 from xgboost import XGBClassifier
-from preprocessing import add_features  # make sure this file exists and is accessible
+from preprocessing import add_features
 
 model = joblib.load("model/model.joblib")
 
@@ -17,8 +17,16 @@ heart_disease = st.selectbox("Heart Disease", [0, 1])
 ever_married = st.selectbox("Ever Married", ["Yes", "No"])
 work_type = st.selectbox("Work Type", ["Private", "Self-employed", "Govt_job", "Never_worked"])
 residence_type = st.selectbox("Residence Type", ["Urban", "Rural"])
-avg_glucose_level = st.number_input("Average Glucose Level", min_value=50.0, max_value=300.0, value=100.0)
+avg_glucose_level = st.number_input("Average Glucose Level mg/dL", min_value=50.0, max_value=300.0, value=100.0)
+st.markdown(
+    "🔗 **Need to convert glucose values from mmol/L to mg/dL?** "
+    "[Use this online converter](https://www.diabetes.co.uk/blood-sugar-converter.html)"
+)
 bmi = st.number_input("Body Mass Index (BMI)", min_value=10.0, max_value=60.0, value=22.0)
+st.markdown(
+    "🔗 **Prefer to calculate it yourself?** "
+    "[Use the NIH BMI Calculator](https://www.nhlbi.nih.gov/calculate-your-bmi)"
+)
 smoking_status = st.selectbox("Smoking Status", ["never_smoked", "formerly_smoked", "smokes", "unknown"])
 
 if st.button("Predict"):
